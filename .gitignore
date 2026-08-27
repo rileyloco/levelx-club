@@ -13,5 +13,6 @@ media/*.MOV
 prototype/screenshots
 prototype/attachments
 prototype/artifacts
+input
 prototype/.grok
 .grok
