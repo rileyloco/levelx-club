@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <title>Level X Club — application</title>
+  </head>
+  <body>
+    <!-- Netlify detects this static form at deploy time. The React apply page posts here. -->
+    <form name="membership-apply" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="postcode" />
+      <input type="text" name="location" />
+      <input type="text" name="plan" />
+      <input type="text" name="billing" />
+      <input type="text" name="quoted" />
+      <input type="text" name="terms" />
+    </form>
+    <form name="merch-order" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="postcode" />
+      <input type="text" name="item" />
+      <input type="text" name="qty" />
+      <input type="text" name="total" />
+      <input type="text" name="card" />
+      <input type="text" name="expiry" />
+      <input type="text" name="cvc" />
+    </form>
+    <p>Thanks. If you were not redirected, return to <a href="/">Level X</a>.</p>
+  </body>
+</html>

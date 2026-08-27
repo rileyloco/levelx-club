@@ -1,0 +1,17 @@
+node_modules
+dist
+.output
+.netlify
+.nitro
+.vercel
+.tanstack
+.chrome-shot
+*.log
+.DS_Store
+media/*.mov
+media/*.MOV
+prototype/screenshots
+prototype/attachments
+prototype/artifacts
+prototype/.grok
+.grok

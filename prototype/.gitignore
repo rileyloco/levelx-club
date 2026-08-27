@@ -1,0 +1,9 @@
+node_modules
+dist
+.output
+.netlify
+.nitro
+.vercel
+.tanstack
+*.log
+.DS_Store

@@ -1,0 +1,23 @@
+import type { ErrorComponentProps } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
+import { TriangleAlert } from "lucide-react";
+
+export function AppErrorComponent({ error }: ErrorComponentProps) {
+  return (
+    <main className="flex min-h-dvh flex-col items-center justify-center gap-3 bg-bg px-6 text-center text-fg">
+      <span className="text-accent" aria-hidden="true">
+        <TriangleAlert className="size-10" strokeWidth={1.5} />
+      </span>
+      <h1 className="font-display text-3xl">Something went wrong</h1>
+      <p className="max-w-md text-sm break-words text-muted">
+        {error.message || "An unexpected error occurred. Try reloading the page."}
+      </p>
+      <Link
+        to="/"
+        className="mt-4 font-sans text-[11px] tracking-[0.2em] text-accent uppercase"
+      >
+        Return home
+      </Link>
+    </main>
+  );
+}
