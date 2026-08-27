@@ -11,9 +11,8 @@ export function FindUs() {
 
   return (
     <section className="find-band lx-section">
-      <div className="lx-wrap text-center">
-        <h2 className="lx-title font-display text-4xl sm:text-5xl">Where to find us</h2>
-      </div>
+      <div className="lx-wrap">
+        <h2 className="lx-title font-display text-4xl sm:text-5xl text-center">Where to find us</h2>
       <div className="find-tabs">
         {locations.map((l) => (
           <button
@@ -37,14 +36,14 @@ export function FindUs() {
         </div>
       ) : null}
       <div className="find-grid">
-        <div>
+        <div className="find-col">
           <h3 className="find-h">Location</h3>
           <div className="find-line" />
           <p className="find-p">{current?.name}</p>
           <p className="find-p">{current?.address}</p>
           {current?.status === "coming" ? <p className="find-soon">Coming soon</p> : null}
         </div>
-        <div>
+        <div className="find-col">
           <h3 className="find-h">Get in touch</h3>
           <div className="find-line" />
           <a className="find-a" href={`tel:${club.phone.replace(/\s/g, "")}`}>
@@ -54,7 +53,7 @@ export function FindUs() {
             {club.email}
           </a>
         </div>
-        <div>
+        <div className="find-col">
           <h3 className="find-h">Follow us</h3>
           <div className="find-line" />
           <div className="find-social">
@@ -72,6 +71,7 @@ export function FindUs() {
             </a>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

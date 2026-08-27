@@ -19,7 +19,7 @@ export const Route = createFileRoute("/merch/checkout")({
   head: () =>
     pageHead({
       title: "Checkout | Level X Club",
-      description: "Checkout for Level X merch. Prototype — no payment is taken.",
+      description: "Checkout for Level X merch. Prototype, no payment is taken.",
       path: "/merch/checkout",
     }),
   component: MerchCheckout,
@@ -81,7 +81,7 @@ function MerchCheckout() {
             Thank you{name ? `, ${name}` : ""}.
           </h1>
           <p className="mt-4 text-sm leading-relaxed text-muted">
-            This is a prototype — no payment was taken.
+            This is a prototype, no payment was taken.
           </p>
           <div className="mt-8">
             <Button asChild size="sm">
@@ -104,7 +104,7 @@ function MerchCheckout() {
         </Link>
         <h1 className="mt-6 font-display text-4xl sm:text-5xl">Checkout</h1>
         <p className="mt-3 text-sm text-muted">
-          Prototype only — no payment is taken.
+          Prototype only, no payment is taken.
         </p>
 
         <form

@@ -14,7 +14,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Level X is a premium invite-only fitness and recovery club. Train, recover and belong — Toowong now open, Queen’s Wharf and the Gold Coast next.",
+          "Level X is a premium invite-only fitness and recovery club. Train, recover and belong, Toowong now open, Queen’s Wharf and the Gold Coast next.",
       },
       { name: "apple-mobile-web-app-title", content: SITE_NAME },
       { name: "theme-color", content: "#090908" },

@@ -36,7 +36,7 @@ function ApplyPage() {
           Sign up
         </h1>
         <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted">
-          Your details, a plan, the terms. Prototype only — no payment is taken.
+          Your details, a plan, the terms. Prototype only, no payment is taken.
         </p>
         <div className="mt-12 max-w-xl">
           <ApplyForm defaultLocation={location} defaultPlan={plan} />

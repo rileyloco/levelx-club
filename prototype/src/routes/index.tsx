@@ -6,14 +6,14 @@ import { JsonLd } from "@/components/site/json-ld";
 import { ReviewsTicker } from "@/components/site/reviews-ticker";
 import { SiteShell } from "@/components/site/site-shell";
 import { VideoFrame } from "@/components/site/video-frame";
-import { club, events, locationBySlug, memberships, pillars } from "@/data/club";
+import { club, events, memberships, pillars } from "@/data/club";
 import { pageHead } from "@/lib/seo";
 
-const PATHS = [
-  { label: "Start here", mile: "01", plan: memberships[0] },
-  { label: "Club", mile: "02", plan: memberships[1] },
-  { label: "Coming soon", mile: "03", plan: memberships[2] },
-] as const;
+const PATHS = memberships.map((plan, i) => ({
+  mile: `0${i + 1}`,
+  plan,
+  blurb: `${plan.summary} ${plan.points.join(". ")}.`,
+}));
 
 export const Route = createFileRoute("/")({
   head: () => {
@@ -80,7 +80,7 @@ function Home() {
           }}
         />
         <div className="relative z-10 flex w-full flex-col items-center px-6 text-center">
-          <h1 className="sr-only">Level X — premium fitness and recovery</h1>
+          <h1 className="sr-only">Level X, premium fitness and recovery</h1>
           <img
             src="/images/logo-x.png"
             alt=""
@@ -111,14 +111,11 @@ function Home() {
         <div className="lx-wrap">
           <div className="club-grid">
             <div className="club-left">
-              <span className="lx-kicker">The club</span>
-              <h2 className="club-heading">Level X</h2>
-              <p className="club-lede">Training and recovery under one roof.</p>
-              <p className="club-sub">Three practices. One standard.</p>
-              <div className="club-facts">
-                <span>Toowong</span>
-                <span>Open daily</span>
-              </div>
+              <span className="lx-kicker">Level X</span>
+              <h2 className="club-heading">Why Choose Us</h2>
+              <p className="club-facts">
+                Fitness<span aria-hidden> · </span>Recovery<span aria-hidden> · </span>Mindset
+              </p>
             </div>
             <div className="club-right">
               {pillars.map((p) => (
@@ -131,34 +128,61 @@ function Home() {
             </div>
           </div>
         </div>
+        <div className="club-strip" aria-hidden>
+          <div className="club-strip-track">
+            {[
+              "/images/strength-floor.jpg",
+              "/images/sauna.jpg",
+              "/images/plunge-room.jpg",
+              "/images/gym-wide.jpg",
+              "/images/training-bench.jpg",
+              "/images/red-light.jpg",
+            ]
+              .concat([
+                "/images/strength-floor.jpg",
+                "/images/sauna.jpg",
+                "/images/plunge-room.jpg",
+                "/images/gym-wide.jpg",
+                "/images/training-bench.jpg",
+                "/images/red-light.jpg",
+              ])
+              .map((src, i) => (
+                <img key={`${src}-${i}`} src={src} alt="" />
+              ))}
+          </div>
+        </div>
+        <div className="lx-wrap">
+          <div className="club-actions">
+            <Link to="/apply" className="club-btn club-btn--primary">
+              Join now
+            </Link>
+            <Link to="/locations" className="club-btn club-btn--secondary">
+              View locations
+            </Link>
+          </div>
+        </div>
       </section>
 
       <section id="locations" className="loc-band lx-section scroll-mt-20">
         <div className="lx-wrap">
           <span className="lx-kicker">Locations</span>
-          <h2 className="lx-title mt-3 font-display text-4xl sm:text-5xl">The clubs</h2>
-          <p className="mt-4 max-w-md text-sm font-normal leading-relaxed opacity-70">
-            Toowong is open. Queen’s Wharf and the Gold Coast are next.
+          <h2 className="loc-heading">The clubs</h2>
+          <p className="loc-line">
+            <span aria-hidden>📍</span> Toowong is open now!
           </p>
-          {(() => {
-            const toowong = locationBySlug("toowong");
-            if (!toowong) return null;
-            return (
-              <Link
-                to="/locations/$slug"
-                params={{ slug: toowong.slug }}
-                className="loc-card mt-10"
-              >
-                <img src={toowong.image} alt="" />
-                <div className="loc-card__shade" />
-                <div className="loc-card__copy">
-                  <p className="loc-card__status">{toowong.statusLabel}</p>
-                  <h3 className="loc-card__name">{toowong.shortName}</h3>
-                  <p className="loc-card__meta">{toowong.address}</p>
-                </div>
-              </Link>
-            );
-          })()}
+          <Link to="/apply" className="loc-join">
+            Join today
+            <span aria-hidden>→</span>
+          </Link>
+          <div className="loc-card">
+            <img src="/images/gym-wide.jpg" alt="" />
+          </div>
+          <p className="loc-line">
+            <span aria-hidden>📍</span> Queen’s Wharf coming soon
+          </p>
+          <p className="loc-line">
+            <span aria-hidden>📍</span> Gold Coast coming soon
+          </p>
           <Link to="/locations" className="loc-more">
             See all locations
           </Link>
@@ -174,21 +198,15 @@ function Home() {
           <div className="path-scroll">
             {PATHS.map((item) => (
               <article key={item.plan.slug} className="path-card">
-                <p className="path-label">{item.label}</p>
+                <p className="path-label">{item.plan.name}</p>
                 <div className="path-mile">{item.mile}</div>
                 <div className="path-body">
-                  <h3 className="path-name">{item.plan.name}</h3>
-                  <p className="path-price">
+                  <h3 className="path-name">
                     {item.plan.price}
                     {item.plan.period ? ` ${item.plan.period}` : ""}
-                  </p>
+                  </h3>
                   <div className="path-rule" />
-                  <p className="path-copy">{item.plan.summary}</p>
-                  <ul className="path-points">
-                    {item.plan.points.map((p) => (
-                      <li key={p}>{p}</li>
-                    ))}
-                  </ul>
+                  <p className="path-copy">{item.blurb}</p>
                   <Link
                     to="/apply"
                     search={{

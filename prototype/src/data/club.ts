@@ -89,9 +89,9 @@ export const club = {
   facebook: "https://www.facebook.com/levelx.club/",
   phone: "(07) 3557 1928",
   region: "Queensland, Australia",
-  seoTitle: "Level X Club | Premium Fitness & Recovery — Queensland",
+  seoTitle: "Level X Club | Premium Fitness & Recovery, Queensland",
   seoDescription:
-    "Level X is a premium fitness and wellness club. World-class training meets luxury wellness — Toowong now open, Queen’s Wharf and the Gold Coast next.",
+    "Level X is a premium fitness and wellness club. World-class training meets luxury wellness, Toowong now open, Queen’s Wharf and the Gold Coast next.",
 };
 
 export const values = [
@@ -109,7 +109,7 @@ export const values = [
   },
   {
     name: "Integrity",
-    copy: "Honest coaching, transparent pricing, real results. We don’t do gimmicks or shortcuts — just proven methods delivered by people who genuinely care about your progress.",
+    copy: "Honest coaching, transparent pricing, real results. We don’t do gimmicks or shortcuts, just proven methods delivered by people who genuinely care about your progress.",
   },
   {
     name: "Wellness",
@@ -125,12 +125,12 @@ export const pillars = [
   {
     num: "01",
     name: "Fitness",
-    copy: "A strength floor fitted to elite standard. Full Technogym. Plae Performance. In-house PT who will not let you coast.",
+    copy: "A strength floor fitted to elite standard, full Technogym, Plae Performance, and in-house PT who will not let you coast. Programming that builds week on week.",
   },
   {
     num: "02",
     name: "Recovery",
-    copy: "Sauna, Fjord cold plunge, compression, HBOT, red light. Not add-ons. As core to Level X as the squat rack.",
+    copy: "Sauna, Fjord cold plunge, compression, HBOT and red light sit next to the floor. Not add-ons. As core to Level X as the squat rack.",
   },
   {
     num: "03",
@@ -241,15 +241,15 @@ export const locations: ClubLocation[] = [
     statusLabel: "Now open",
     address: "Suite 6/37 Archer Street, Toowong QLD 4066",
     phone: "(07) 3557 1928",
-    hours: "Monday–Sunday, 5am–10pm",
+    hours: "Monday-Sunday, 5am-10pm",
     parking: "On-site and street parking. Inner-west buses and CityCat nearby.",
-    eyebrow: "Location 01 — Brisbane",
+    eyebrow: "Location 01, Brisbane",
     headline: "Toowong",
     lede: "Level X Toowong is where performance meets recovery. This is training and recovery under one roof.",
     body: [
       "Level X Toowong is where performance meets recovery. Train on a full Technogym fit-out alongside a Plae Performance setup, with in-house PT services to guide every session. The Level X app puts programming, progression tracking and interactive equipment in your pocket, so every workout builds on the last.",
-      "Recovery is built in, not bolted on. After a heavy session, start with compression therapy to flush the muscles, then finish with contrast therapy — a plunge in our Fjord cold baths paired with our traditional steam sauna, fitted with a luxury heater for even heat circulation. Round it out with HBOT and red light therapy machines to speed up recovery and sharpen performance.",
-      "Beyond the floor, our run club and breathwork classes round out the community and mindset side of training. This is training and recovery under one roof — Level X Toowong.",
+      "Recovery is built in, not bolted on. After a heavy session, start with compression therapy to flush the muscles, then finish with contrast therapy, a plunge in our Fjord cold baths paired with our traditional steam sauna, fitted with a luxury heater for even heat circulation. Round it out with HBOT and red light therapy machines to speed up recovery and sharpen performance.",
+      "Beyond the floor, our run club and breathwork classes round out the community and mindset side of training. This is training and recovery under one roof, Level X Toowong.",
     ],
     facilities: [
       {
@@ -299,7 +299,7 @@ export const locations: ClubLocation[] = [
       "/images/change-room.jpg",
       "/images/shower.jpg",
     ],
-    seoTitle: "Level X Toowong | Now Open — Fitness & Recovery Club Brisbane",
+    seoTitle: "Level X Toowong | Now Open, Fitness & Recovery Club Brisbane",
     seoDescription:
       "Level X Toowong is open at 37 Archer Street. Technogym and Plae training, Fjord cold plunge, sauna, HBOT and red light. Apply for membership.",
   },
@@ -414,7 +414,7 @@ export const events: ClubEvent[] = [
     locationLabel: "Toowong",
     kind: "Community",
     summary: "Pre-dawn kilometres with the club. All paces.",
-    body: "Meet at the Archer Street doors. An easy-to-honest loop through the inner west, then back to the club. Members and applicants welcome — just tell us you are coming.",
+    body: "Meet at the Archer Street doors. An easy-to-honest loop through the inner west, then back to the club. Members and applicants welcome, just tell us you are coming.",
     image: "/images/training-curl.jpg",
   },
   {
@@ -440,7 +440,7 @@ export const events: ClubEvent[] = [
     locationLabel: "Toowong",
     kind: "Membership",
     summary: "Walk the floor. Meet the team.",
-    body: "A small-group evening through the Toowong club — strength floor, recovery suite, and an honest conversation about Foundation membership. Apply first, then we save you a place.",
+    body: "A small-group evening through the Toowong club, strength floor, recovery suite, and an honest conversation about Foundation membership. Apply first, then we save you a place.",
     image: "/images/gym-wide.jpg",
   },
   {
@@ -453,7 +453,7 @@ export const events: ClubEvent[] = [
     locationLabel: "Toowong",
     kind: "Recovery",
     summary: "How we use heat and cold so they serve the work, not undo it.",
-    body: "A practical briefing on Fjord plunge and steam protocol — when to go cold, when to stay out of it after lifting, and how to build contrast into a week that still makes you stronger.",
+    body: "A practical briefing on Fjord plunge and steam protocol, when to go cold, when to stay out of it after lifting, and how to build contrast into a week that still makes you stronger.",
     image: "/images/plunge-room.jpg",
   },
   {
@@ -466,7 +466,7 @@ export const events: ClubEvent[] = [
     locationLabel: "Queen’s Wharf",
     kind: "Preview",
     summary: "The flagship, in conversation. What we are building and who it is for.",
-    body: "A briefing for members and registered interest on the Queen’s Wharf club — performance zone, bathhouse, nutrition, and the timeline as it stands.",
+    body: "A briefing for members and registered interest on the Queen’s Wharf club, performance zone, bathhouse, nutrition, and the timeline as it stands.",
     image: "/images/queens-wharf.jpg",
   },
   {
@@ -490,7 +490,7 @@ export const trainers = [
     name: "Benny Lucas",
     role: "Head Trainer",
     focus: ["Strength", "Conditioning", "Recovery", "Programming"],
-    bio: "Benny brings elite-level expertise and a passion for helping members unlock their full potential. His approach is built around performance, precision and results — strength, conditioning and recovery treated as one practice.",
+    bio: "Benny brings elite-level expertise and a passion for helping members unlock their full potential. His approach is built around performance, precision and results, strength, conditioning and recovery treated as one practice.",
     image: "/images/trainer-benny.jpg",
   },
 ];
@@ -518,7 +518,7 @@ export const faqs = [
   },
   {
     q: "Is there parking available?",
-    a: "Yes, all our club locations offer convenient parking options. Details vary by location — check your specific club page for parking information and nearby public transport options.",
+    a: "Yes, all our club locations offer convenient parking options. Details vary by location, check your specific club page for parking information and nearby public transport options.",
   },
 ];
 

@@ -1,6 +1,5 @@
 [build]
-  base = "prototype"
-  command = "npm install && npm run build"
+  command = "npm run build"
   publish = "dist/client"
 
 [build.environment]
@@ -21,23 +20,3 @@
   for = "/og.jpg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-
-[[redirects]]
-  from = "/fitness"
-  to = "/#the-club"
-  status = 301
-
-[[redirects]]
-  from = "/about"
-  to = "/#about"
-  status = 301
-
-[[redirects]]
-  from = "/trainers"
-  to = "/locations/toowong"
-  status = 301
-
-[[redirects]]
-  from = "/events/*"
-  to = "/events"
-  status = 301

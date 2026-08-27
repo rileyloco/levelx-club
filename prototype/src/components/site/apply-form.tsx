@@ -33,7 +33,7 @@ export function ApplyForm({
     () =>
       locations.map((l) => ({
         value: l.slug,
-        label: `${l.shortName}${l.status === "coming" ? " — coming soon" : ""}`,
+        label: `${l.shortName}${l.status === "coming" ? " (coming soon)" : ""}`,
       })),
     [],
   );
@@ -91,7 +91,7 @@ export function ApplyForm({
           Thank you{name ? `, ${name}` : ""}.
         </h3>
         <p className="mx-auto mt-4 max-w-md text-sm leading-relaxed text-muted">
-          This is a prototype — no payment was taken. In the live club, this is
+          This is a prototype, no payment was taken. In the live club, this is
           where membership would be confirmed and billed.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
@@ -162,7 +162,7 @@ export function ApplyForm({
             name="billing"
             value={billing}
             options={[
-              { value: "weekly", label: `Weekly — ${selected.price}${selected.period}` },
+              { value: "weekly", label: `Weekly ${selected.price}${selected.period}` },
               {
                 value: "monthly",
                 label: selected.priceNote.split(".")[0] ?? "Monthly",

@@ -7,7 +7,7 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/events/")({
   head: () =>
     pageHead({
-      title: "Events | Level X Club — Run Club, Breathwork & Briefings",
+      title: "Events | Level X Club, Run Club, Breathwork & Briefings",
       description:
         "Level X member events: Toowong run club, breathwork, Foundation tours, contrast therapy clinics, and upcoming Queen’s Wharf and Gold Coast briefings.",
       path: "/events",
@@ -60,7 +60,7 @@ function EventsIndex() {
         <div className="mx-auto max-w-[720px] px-5 py-20 text-center">
           <h2 className="font-display text-3xl">Apply first</h2>
           <p className="mx-auto mt-4 max-w-md text-sm text-muted">
-            Events follow membership — and a few open briefings for people still
+            Events follow membership, and a few open briefings for people still
             deciding.
           </p>
           <div className="mt-8">

@@ -7,7 +7,7 @@ import { pageHead } from "@/lib/seo";
 export const Route = createFileRoute("/memberships")({
   head: () =>
     pageHead({
-      title: "Memberships | Level X Club — Apply for Membership",
+      title: "Memberships | Level X Club, Apply for Membership",
       description:
         "Begin your Level X journey. Apply for membership at Toowong, or register interest for Queen’s Wharf and the Gold Coast.",
       path: "/memberships",
@@ -27,7 +27,7 @@ function MembershipsPage() {
             How you join
           </h1>
           <p className="mt-5 max-w-xl text-base text-muted">
-            Sign up online. Prototype pricing — no payment is taken yet.
+            Sign up online. Prototype pricing, no payment is taken yet.
           </p>
         </div>
       </section>
