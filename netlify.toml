@@ -37,11 +37,6 @@
   status = 301
 
 [[redirects]]
-  from = "/locations"
-  to = "/#locations"
-  status = 301
-
-[[redirects]]
   from = "/events/*"
   to = "/events"
   status = 301

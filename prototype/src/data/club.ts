@@ -522,6 +522,17 @@ export const faqs = [
   },
 ];
 
+export const reviews = [
+  "Training and recovery, finally in the same room.",
+  "The floor is serious. The suite is the point.",
+  "Toowong set the standard.",
+  "Not a gym. A club.",
+  "Recovery is not an add-on.",
+  "They will not let you coast.",
+  "Heat, cold, then the work.",
+  "A community that treats standards as a kindness.",
+];
+
 export const applyGoals = [
   "Strength & physique",
   "Performance & sport",
