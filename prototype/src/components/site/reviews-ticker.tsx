@@ -5,7 +5,10 @@ export function ReviewsTicker() {
   return (
     <section className="lx-section">
       <div className="rev-head">
-        <h2 className="rev-title">From the floor</h2>
+        <h2 className="rev-title">Reviews from the community</h2>
+        <div className="rev-stars" aria-hidden>
+          ★★★★★
+        </div>
       </div>
       <div className="rev-ticker">
         <div className="rev-track">

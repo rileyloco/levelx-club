@@ -523,14 +523,14 @@ export const faqs = [
 ];
 
 export const reviews = [
-  "Training and recovery, finally in the same room.",
-  "The floor is serious. The suite is the point.",
-  "Toowong set the standard.",
+  "The floor is serious.",
   "Not a gym. A club.",
-  "Recovery is not an add-on.",
+  "Toowong set the standard.",
+  "Recovery is the point.",
   "They will not let you coast.",
-  "Heat, cold, then the work.",
-  "A community that treats standards as a kindness.",
+  "Heat, then cold, then work.",
+  "Standards as a kindness.",
+  "Under one roof.",
 ];
 
 export const applyGoals = [

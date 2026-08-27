@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ContactForm } from "@/components/site/contact-form";
 import { FaqList } from "@/components/site/faq-list";
+import { FindUs } from "@/components/site/find-us";
 import { JsonLd } from "@/components/site/json-ld";
 import { ReviewsTicker } from "@/components/site/reviews-ticker";
 import { SiteShell } from "@/components/site/site-shell";
@@ -111,10 +112,13 @@ function Home() {
           <div className="club-grid">
             <div className="club-left">
               <span className="lx-kicker">The club</span>
-              <h2 className="club-heading">
-                Training and recovery under one roof.
-              </h2>
-              <p className="club-lede">Three practices. One standard.</p>
+              <h2 className="club-heading">Level X</h2>
+              <p className="club-lede">Training and recovery under one roof.</p>
+              <p className="club-sub">Three practices. One standard.</p>
+              <div className="club-facts">
+                <span>Toowong</span>
+                <span>Open daily</span>
+              </div>
             </div>
             <div className="club-right">
               {pillars.map((p) => (
@@ -163,7 +167,7 @@ function Home() {
 
       <section className="lx-section">
         <div className="path-head">
-          <h2 className="path-title">How you join</h2>
+          <h2 className="path-title">Select your membership</h2>
         </div>
         <div className="path-track">
           <div className="path-thread" />
@@ -174,8 +178,17 @@ function Home() {
                 <div className="path-mile">{item.mile}</div>
                 <div className="path-body">
                   <h3 className="path-name">{item.plan.name}</h3>
+                  <p className="path-price">
+                    {item.plan.price}
+                    {item.plan.period ? ` ${item.plan.period}` : ""}
+                  </p>
                   <div className="path-rule" />
                   <p className="path-copy">{item.plan.summary}</p>
+                  <ul className="path-points">
+                    {item.plan.points.map((p) => (
+                      <li key={p}>{p}</li>
+                    ))}
+                  </ul>
                   <Link
                     to="/apply"
                     search={{
@@ -197,11 +210,11 @@ function Home() {
       <ReviewsTicker />
 
       <section className="lx-section">
-        <div className="lx-wrap text-center">
+        <div className="ev-head">
           <h2 className="lx-title font-display text-4xl sm:text-5xl">In the house</h2>
         </div>
         <div className="ev-list">
-          {events.slice(0, 3).map((e) => (
+          {events.slice(0, 1).map((e) => (
             <Link key={e.slug} to="/events" className="ev-row">
               <div>
                 <p className="ev-kind">{e.kind}</p>
@@ -214,8 +227,8 @@ function Home() {
           ))}
           <Link to="/events" className="ev-row">
             <div>
-              <p className="ev-kind">The calendar</p>
-              <h3 className="ev-name">All events</h3>
+              <p className="ev-kind">What’s on</p>
+              <h3 className="ev-name">Upcoming events</h3>
             </div>
             <svg className="ev-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
@@ -225,49 +238,23 @@ function Home() {
       </section>
 
       <section id="about" className="lx-section scroll-mt-20">
-        <div className="lx-wrap text-center">
-          <h2 className="lx-title font-display text-4xl sm:text-5xl">
-            Frequently asked questions
+        <div className="faq-head">
+          <h2 className="lx-title">
+            Frequently
+            <br />
+            asked questions
           </h2>
         </div>
         <FaqList />
       </section>
 
-      <section id="contact" className="lx-section scroll-mt-24">
+      <div id="contact" className="scroll-mt-24">
+        <FindUs />
+      </div>
+
+      <section className="lx-section">
         <div className="lx-wrap text-center">
-          <h2 className="lx-title font-display text-4xl sm:text-5xl">Where to find us</h2>
-        </div>
-        <div className="find-grid">
-          <div>
-            <h3 className="find-h">Location</h3>
-            <div className="find-line" />
-            <p className="find-p">Level X Toowong</p>
-            <p className="find-p">Suite 6/37 Archer Street</p>
-            <p className="find-p">Toowong QLD 4066</p>
-          </div>
-          <div>
-            <h3 className="find-h">Get in touch</h3>
-            <div className="find-line" />
-            <a className="find-a" href={`tel:${club.phone.replace(/\s/g, "")}`}>
-              {club.phone}
-            </a>
-            <a className="find-a" href={`mailto:${club.email}`}>
-              {club.email}
-            </a>
-          </div>
-          <div>
-            <h3 className="find-h">Follow us</h3>
-            <div className="find-line" />
-            <a className="find-a" href={club.instagram} target="_blank" rel="noreferrer">
-              Instagram
-            </a>
-            <a className="find-a" href={club.facebook} target="_blank" rel="noreferrer">
-              Facebook
-            </a>
-          </div>
-        </div>
-        <div className="lx-wrap mt-16 text-center">
-          <h2 className="lx-title font-display text-4xl">Contact us</h2>
+          <h2 className="lx-title font-display text-4xl sm:text-5xl">Contact Us</h2>
           <ContactForm />
         </div>
       </section>
