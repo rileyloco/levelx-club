@@ -4,20 +4,23 @@ import type { ButtonHTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full font-sans font-medium uppercase transition-[color,background-color,border-color,transform,opacity] duration-200 ease-out active:not-disabled:scale-[0.96] disabled:pointer-events-none disabled:opacity-40",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap border font-sans font-medium leading-none transition-[color,background-color,border-color,transform,box-shadow] duration-150 ease-out hover:not-disabled:-translate-y-px active:not-disabled:scale-[0.98] disabled:pointer-events-none disabled:opacity-40",
   {
     variants: {
       variant: {
-        primary: "bg-accent text-accent-fg hover:bg-fg hover:text-bg",
+        primary:
+          "border-transparent bg-accent text-accent-fg hover:bg-[color-mix(in_srgb,var(--color-accent)_82%,var(--color-surface))]",
         outline:
-          "border border-line-strong bg-transparent text-fg hover:border-fg hover:bg-fg hover:text-bg",
-        ghost: "text-muted hover:text-fg",
-        inverse: "bg-fg text-bg hover:bg-accent hover:text-accent-fg",
+          "border-line-strong bg-transparent text-fg hover:border-[color-mix(in_srgb,var(--color-fg)_32%,var(--color-line))] hover:bg-[color-mix(in_srgb,var(--color-fg)_8%,var(--color-bg))]",
+        ghost:
+          "border-transparent bg-transparent text-muted hover:bg-[color-mix(in_srgb,var(--color-fg)_6%,transparent)] hover:text-fg",
+        inverse:
+          "border-transparent bg-fg text-bg hover:bg-[color-mix(in_srgb,var(--color-fg)_82%,var(--color-accent))]",
       },
       size: {
-        md: "h-10 px-4 text-[10px] tracking-[0.14em] sm:h-11 sm:px-5 sm:text-[11px] sm:tracking-[0.16em]",
-        lg: "h-10 px-4 text-[10px] tracking-[0.14em] sm:h-11 sm:px-6 sm:text-[11px] sm:tracking-[0.16em]",
-        sm: "h-9 px-3.5 text-[10px] tracking-[0.14em]",
+        md: "min-h-9 rounded-[9px] px-3.5 text-[13.5px]",
+        lg: "min-h-11 rounded-[11px] px-[18px] text-[15px]",
+        sm: "min-h-[30px] rounded-lg px-[11px] text-[12.5px]",
       },
     },
     defaultVariants: {

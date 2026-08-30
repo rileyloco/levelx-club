@@ -3,11 +3,13 @@ import { reviews } from "@/data/club";
 export function ReviewsTicker() {
   const row = [...reviews, ...reviews];
   return (
-    <section className="lx-section">
+    <section className="lx-section rev-band">
       <div className="rev-head">
         <h2 className="rev-title">Reviews from the community</h2>
-        <div className="rev-stars" aria-hidden>
-          ★★★★★
+        <div className="rev-stats">
+          <span className="rev-stars" aria-hidden>
+            ★★★★★
+          </span>
         </div>
       </div>
       <div className="rev-ticker">
